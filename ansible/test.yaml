@@ -1,0 +1,12 @@
+---
+- name: Ansible Test
+  hosts: practica
+  become: yes
+  tasks:
+   - name: Update and upgrade 
+     apt:
+       update_cache=yes
+       upgrade=yes
+   - name: Install Nano
+     apt:
+       name: nano
